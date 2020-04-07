@@ -46,12 +46,13 @@ savingsWithdrawButton.addEventListener('click', function() {
     savingsBalance.innerText = savingsInt
 
     if(savingsInt < 0){
-        alert('NOPE YOU CANT DO THAT GANGSTA!')
+        alert('NOPE YOU CANT DO THAT!')
         savingsInt = (savingsInt + parseFloat(savingsInput.value))
         savingsBalance.innerText = savingsInt
 
     }
-    if(savingsInt === 0){
+    if(parseFloat(savingsBalance.innerText) <= 0){
+       return savingsBalance.style.color = "red"
 
     }
 })
@@ -69,11 +70,14 @@ checkingWithdrawButton.addEventListener('click', function() {
     checkingBalance.innerText = checkingInt
 
     if(checkingInt < 0){
-        alert('NOPE YOU CANT DO THAT GANGSTA!')
+        alert('NOPE YOU CANT DO THAT!')
         checkingInt = (checkingInt + parseFloat(checkingInput.value))
         checkingBalance.innerText = checkingInt
     }
-    if(checkingInt === 0){
+    if(parseFloat(checkingBalance.innerText) <= 0){
+        return checkingBalance.style.color = "red"
+ 
+     }
 
     }
-})
+)
