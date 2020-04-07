@@ -36,22 +36,44 @@ savingsDespoitButton.addEventListener('click', function() {
     savingsInt = (savingsInt + parseFloat(savingsInput.value))
     //then update the savingsBalance.innertext value
     savingsBalance.innerText = savingsInt
+
+
 })
 
 savingsWithdrawButton.addEventListener('click', function() {
     let savingsInt = parseFloat(savingsBalance.innerText)
     savingsInt = (savingsInt - parseFloat(savingsInput.value))
     savingsBalance.innerText = savingsInt
+
+    if(savingsInt < 0){
+        alert('NOPE YOU CANT DO THAT GANGSTA!')
+        savingsInt = (savingsInt + parseFloat(savingsInput.value))
+        savingsBalance.innerText = savingsInt
+
+    }
+    if(savingsInt === 0){
+
+    }
 })
 
 checkingDepositButton.addEventListener('click', function() {
     let checkingInt = parseFloat(checkingBalance.innerText)
     checkingInt = (checkingInt + parseFloat(checkingInput.value))
     checkingBalance.innerText = checkingInt
+
 })
 
 checkingWithdrawButton.addEventListener('click', function() {
     let checkingInt = parseFloat(checkingBalance.innerText)
     checkingInt = (checkingInt - parseFloat(checkingInput.value))
     checkingBalance.innerText = checkingInt
+
+    if(checkingInt < 0){
+        alert('NOPE YOU CANT DO THAT GANGSTA!')
+        checkingInt = (checkingInt + parseFloat(checkingInput.value))
+        checkingBalance.innerText = checkingInt
+    }
+    if(checkingInt === 0){
+
+    }
 })
