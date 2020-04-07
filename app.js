@@ -33,9 +33,25 @@ savingsDespoitButton.addEventListener('click', function() {
     let savingsInt = parseFloat(savingsBalance.innerText)
     //then add the .value to the savings Int
     //and make it equil the savingsInt value so its saved
-    savingsInt = (savingsInt + 50)
+    savingsInt = (savingsInt + parseFloat(savingsInput.value))
     //then update the savingsBalance.innertext value
     savingsBalance.innerText = savingsInt
+})
 
+savingsWithdrawButton.addEventListener('click', function() {
+    let savingsInt = parseFloat(savingsBalance.innerText)
+    savingsInt = (savingsInt - parseFloat(savingsInput.value))
+    savingsBalance.innerText = savingsInt
+})
 
+checkingDepositButton.addEventListener('click', function() {
+    let checkingInt = parseFloat(checkingBalance.innerText)
+    checkingInt = (checkingInt + parseFloat(checkingInput.value))
+    checkingBalance.innerText = checkingInt
+})
+
+checkingWithdrawButton.addEventListener('click', function() {
+    let checkingInt = parseFloat(checkingBalance.innerText)
+    checkingInt = (checkingInt - parseFloat(checkingInput.value))
+    checkingBalance.innerText = checkingInt
 })
