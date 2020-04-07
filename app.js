@@ -23,6 +23,19 @@ const checkingInput = document.getElementById('checkingInput')
 const savingsInput = document.getElementById('savingsInput')
 
 savingsDespoitButton.addEventListener('click', function() {
-    alert("gangasta")
     //add .value to balance.innerText
+    //now I have to find a way to convert the innertext into a number
+    //parseFloat will convert a sting value intot a number
+    //---parseFloat(savingsBalance.innerText) +100
+    //let savingsInt = parseFloat(savingsBalance.innerText)
+    //savingsBalance.innerText = savingsInt
+    //savingsInt = (savingsInt + 50)
+    let savingsInt = parseFloat(savingsBalance.innerText)
+    //then add the .value to the savings Int
+    //and make it equil the savingsInt value so its saved
+    savingsInt = (savingsInt + 50)
+    //then update the savingsBalance.innertext value
+    savingsBalance.innerText = savingsInt
+
+
 })
